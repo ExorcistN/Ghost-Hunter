@@ -406,6 +406,7 @@ GameObject:
   - 61: {fileID: 330424784}
   - 114: {fileID: 330424786}
   - 114: {fileID: 330424785}
+  - 114: {fileID: 330424787}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Enemy
@@ -514,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bada0ca22d5efd469ac17f8bc46167c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 1
+  damageToGive: 10
 --- !u!114 &330424786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +531,19 @@ MonoBehaviour:
   enemyTransform: {fileID: 330424782}
   speed: 1.5
   rotationSpeed: 10
+--- !u!114 &330424787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330424779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2081ae5467a53a04cba4c213b8864e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 40
+  pointsOnDeath: 10
 --- !u!1 &518235248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab27f14952eb8c94193a83affca0eab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxPlayerHealth: 10
+  MaxPlayerHealth: 50
 --- !u!114 &1014000520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,7 +1846,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1666321992}
   m_Layer: 0
-  m_Name: AllMonsters
+  m_Name: AllEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,7 +4,9 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 
     public float Bulletspeed;
-    public PlayerControl player;
+    private PlayerControl player;
+
+    public int damageToGive;
 
     //private float leftMap = -6.5f;
     //private float rightMap = 77f;
@@ -37,8 +39,9 @@ public class BulletController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy"){
-            Destroy(other.gameObject);
-            ScoreManager.AddPoints(10);
+            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
+        //    Destroy(other.gameObject);
+        //    //ScoreManager.AddPoints(10);
         }
         Destroy(gameObject);
     }
