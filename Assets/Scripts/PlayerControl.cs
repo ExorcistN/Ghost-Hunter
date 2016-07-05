@@ -67,7 +67,7 @@ public class PlayerControl : MonoBehaviour {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
                 transform.localScale = new Vector3(-1f, 1f, 1f);
                 Debug.Log("test");
-				Debug.Log("test2test");
+				Debug.Log("test2");
             }
 
             //Shooting
