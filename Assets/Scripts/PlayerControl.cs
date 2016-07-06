@@ -9,17 +9,19 @@ public class PlayerControl : MonoBehaviour {
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-
     private bool grounded;
+
+
     private bool deadCheck;
 
-    private Animator anim;
+   private Animator anim;
 
     public Transform firePoint;
     public GameObject bullet;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
         anim = GetComponent<Animator>();
 	}
 
@@ -30,8 +32,8 @@ public class PlayerControl : MonoBehaviour {
     public void DelCharacter()
     {
         deadCheck = true;
-        //Destroy(GetComponent<Rigidbody2D>());
-        //Destroy(gameObject, 0.6f);
+        Destroy(GetComponent<Rigidbody2D>());
+        Destroy(gameObject, 0.6f);
     }
     void Update() {
         anim.SetBool("DeadCheck", deadCheck);
@@ -71,7 +73,7 @@ public class PlayerControl : MonoBehaviour {
             }
 
             //Shooting
-            if (Input.GetKeyDown(KeyCode.X))
+           if (Input.GetKeyDown(KeyCode.X))
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 anim.Play("exAtk2");
@@ -82,7 +84,7 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
+
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
     }
