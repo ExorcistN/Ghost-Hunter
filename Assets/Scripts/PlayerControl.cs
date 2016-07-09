@@ -10,8 +10,9 @@ public class PlayerControl : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-
     private bool grounded;
+
+
     private bool deadCheck;
 
     public Animator anim;
@@ -20,8 +21,9 @@ public class PlayerControl : MonoBehaviour
     public GameObject bullet;
     public GameObject MeleeAttackEffect;
 
-    // Use this for initialization
-    void Start()
+
+	// Use this for initialization
+	void Start () 
     {
         anim = GetComponent<Animator>();
     }
@@ -72,7 +74,7 @@ public class PlayerControl : MonoBehaviour
             }
 
             //Shooting
-            if (Input.GetKeyDown(KeyCode.X))
+           if (Input.GetKeyDown(KeyCode.X))
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 anim.Play("exAtk2");
@@ -85,10 +87,9 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+	
+	// Update is called once per frame
+	void FixedUpdate () {
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
