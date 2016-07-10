@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 
     public float Bulletspeed;
-    private PlayerControl player;
+    public PlayerControl player;
 
     public int damageToGive;
 
@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Bulletspeed,GetComponent<Rigidbody2D>().velocity.y);
         if (transform.position.x < player.transform.position.x-4 || transform.position.x > player.transform.position.x+4)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 	}
 

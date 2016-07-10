@@ -56,17 +56,17 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script2\BulletControl2.cs" />
+    <Compile Include="Assets\Script2\Checkpoint2.cs" />
+    <Compile Include="Assets\Script2\EnemyControl2.cs" />
+    <Compile Include="Assets\Script2\Kilplayer2.cs" />
+    <Compile Include="Assets\Script2\LevelManager2.cs" />
+    <Compile Include="Assets\Script2\PlayControl2.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
