@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour
+{
 
     public float moveSpeed;
     public float jumpHeight;
@@ -13,10 +14,12 @@ public class PlayerControl : MonoBehaviour {
 
     private bool deadCheck;
 
-   private Animator anim;
+    public Animator anim;
 
     public Transform firePoint;
     public GameObject bullet;
+    public GameObject MeleeAttackEffect;
+
 
     void FixedUpdate()
     {
@@ -29,7 +32,7 @@ public class PlayerControl : MonoBehaviour {
 	void Start () 
     {
         anim = GetComponent<Animator>();
-	}
+    }
 
     public void spawnCharacter()
     {
@@ -38,14 +41,14 @@ public class PlayerControl : MonoBehaviour {
     public void DelCharacter()
     {
         deadCheck = true;
-        Destroy(GetComponent<Rigidbody2D>());
-        Destroy(gameObject, 0.6f);
+        //Destroy(GetComponent<Rigidbody2D>());
+        //Destroy(gameObject, 0.6f);
     }
-    void Update() {
+    void Update()
+    {
         anim.SetBool("DeadCheck", deadCheck);
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
         if (!deadCheck)
         {
             //Jumping
@@ -53,13 +56,13 @@ public class PlayerControl : MonoBehaviour {
             {
                 //GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpHeight);
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-                Debug.Log(GetComponent<Rigidbody2D>().velocity);
                 //Debug.Log(Input.GetAxis("Horizontal"));
             }
 
             //GetComponent<Rigidbody2D>().velocity.y
 
             //RIght && left
+
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -74,8 +77,6 @@ public class PlayerControl : MonoBehaviour {
             {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
                 transform.localScale = new Vector3(-1f, 1f, 1f);
-                Debug.Log("test");
-				Debug.Log("test2");
             }
 
             //Shooting
@@ -83,6 +84,11 @@ public class PlayerControl : MonoBehaviour {
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 anim.Play("exAtk2");
+            }
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                Instantiate(MeleeAttackEffect, firePoint.position, firePoint.rotation);
+                anim.Play("exAtk1");
             }
         }
 
