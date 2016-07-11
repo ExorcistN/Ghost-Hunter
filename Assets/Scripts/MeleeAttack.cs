@@ -9,8 +9,8 @@ public class MeleeAttack : MonoBehaviour {
 
     public GameObject character;
 
-    private float attackTimer;
-    private float cdAttack;
+    private float attackTimer = 1;
+    private float AllTimeAttack = 3;
 
 
 
@@ -31,20 +31,18 @@ public class MeleeAttack : MonoBehaviour {
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-        attackTimer = 1;
-        cdAttack = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cdAttack<attackTimer)
+        if (AllTimeAttack<attackTimer)
         {
             Destroy(gameObject);
         }
-        cdAttack -= attackTimer;
+        AllTimeAttack -= attackTimer;
         
-        Debug.Log(cdAttack);
+        Debug.Log(AllTimeAttack);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -52,6 +50,7 @@ public class MeleeAttack : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
+            other.transform.position += transform.right*40*Time.deltaTime;
             Destroy(gameObject);
             //    //ScoreManager.AddPoints(10);
         }
