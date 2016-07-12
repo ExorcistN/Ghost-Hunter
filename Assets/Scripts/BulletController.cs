@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 
     public float Bulletspeed;
-    private PlayerControl player;
+    public PlayerControl player;
 
     public int damageToGive;
 
@@ -43,6 +43,7 @@ public class BulletController : MonoBehaviour {
         //    Destroy(other.gameObject);
         //    //ScoreManager.AddPoints(10);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        GetComponent<Renderer>().enabled = false;
     }
 }
