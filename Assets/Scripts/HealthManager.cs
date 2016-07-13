@@ -14,13 +14,11 @@ public class HealthManager : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
         text = GetComponent<Text>();
-
         playerHealth = MaxPlayerHealth;
-
         levelManager = FindObjectOfType<LevelManager>();
-
         isDead = false;
 	
 	}

@@ -40,7 +40,7 @@ public class BulletController : MonoBehaviour {
     {
         if(other.tag == "Enemy"){
             other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-        //    Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         //    //ScoreManager.AddPoints(10);
         }
         Destroy(gameObject);

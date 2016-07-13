@@ -22,7 +22,6 @@ public class EnemyHealthManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
     public void giveDamage(int damageToGive)
     {
         enemyHealth -= damageToGive;

@@ -4,8 +4,9 @@ using System.Collections;
 public class BulletControl2 : MonoBehaviour {
 
 
-    public float speedbullet;
+    public float speedbullet;//ความเร็วกระสุน
     public PlayControl2 player2;
+    public int damageToGive;//ความแรงในการโ๗มตีตัวละครหลัก
 	// Use this for initialization
 	void Start () {
         player2 = FindObjectOfType<PlayControl2>();
@@ -31,4 +32,14 @@ public class BulletControl2 : MonoBehaviour {
             //Destroy(gameObject);
         }
 	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyHealthManager2>().giveDamage(damageToGive);
+            //Destroy(other.gameObject);
+            //ScoreChar.AddPoints(10);
+        }
+        Destroy(gameObject);//วัตถุจะลบตัวมันเองเมื่อมีการกระทบกับวัตถุ
+    }
 }

@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour {
+public class ScoreManager : MonoBehaviour
+{
 
     public static int score;
 
@@ -22,10 +23,12 @@ public class ScoreManager : MonoBehaviour {
         text.text = "" + score;
     }
 
-    public static void AddPoints(int pointsToAdd) {
+    public static void AddPoints(int pointsToAdd) 
+    {
         score += pointsToAdd;
     }
-    public static void Reset() {
+    public static void Reset() 
+    {
         score = 0;
     }
 }
