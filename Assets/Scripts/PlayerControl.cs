@@ -20,6 +20,9 @@ public class PlayerControl : MonoBehaviour
     public GameObject bullet;
     public GameObject MeleeAttackEffect;
 
+    public float attackDelay;
+    private float attackDelayCounter = 0;
+
 
     void FixedUpdate()
     {
@@ -29,6 +32,7 @@ public class PlayerControl : MonoBehaviour
     }
 
 	// Use this for initialization
+    //E:
 	void Start () 
     {
         anim = GetComponent<Animator>();
@@ -80,18 +84,23 @@ public class PlayerControl : MonoBehaviour
             }
 
             //Shooting
-           if (Input.GetKeyDown(KeyCode.X))
+            if (attackDelayCounter < 0)
             {
-                Instantiate(bullet, firePoint.position, firePoint.rotation);
-                anim.Play("exAtk2");
-            }
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                Instantiate(MeleeAttackEffect, firePoint.position, firePoint.rotation);
-                anim.Play("exAtk1");
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    Instantiate(bullet, firePoint.position, firePoint.rotation);
+                    anim.Play("exAtk2");
+                    attackDelayCounter = attackDelay;
+                }
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    Instantiate(MeleeAttackEffect, firePoint.position, firePoint.rotation);
+                    anim.Play("exAtk1");
+                    attackDelayCounter = attackDelay;
+                }
             }
         }
-
+        attackDelayCounter -= 1;
     }
 	
 	// Update is called once per frame

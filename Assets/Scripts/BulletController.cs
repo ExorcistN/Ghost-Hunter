@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Bulletspeed,GetComponent<Rigidbody2D>().velocity.y);
         if (transform.position.x < player.transform.position.x-4 || transform.position.x > player.transform.position.x+4)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 	}
 
@@ -43,6 +43,7 @@ public class BulletController : MonoBehaviour {
             //Destroy(other.gameObject);
         //    //ScoreManager.AddPoints(10);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        GetComponent<Renderer>().enabled = false;
     }
 }
