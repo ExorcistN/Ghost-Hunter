@@ -31,7 +31,9 @@ public class HealthManager : MonoBehaviour {
         {
             levelManager.DeadPlayer();
             isDead = true;
-            text.text = "0";
+
+            playerHealth = 0;
+            text.text = "" + playerHealth;
         }
         else
         {

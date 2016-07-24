@@ -12,6 +12,8 @@ public class MeleeAttack : MonoBehaviour {
     private float attackTimer = 1;
     private float AllTimeAttack = 3;
 
+    public float knockbacklenght;
+
 
 
     //private float leftMap = -6.5f;
@@ -50,7 +52,16 @@ public class MeleeAttack : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-            other.transform.position += transform.right*40*Time.deltaTime;
+            if (other.transform.localScale.x > 0)
+            {
+                //other.transform.position += transform.right * 40 * Time.deltaTime;
+                other.transform.position += transform.right * knockbacklenght;
+            }
+            else
+            {
+                //other.transform.position -= transform.right * 40 * Time.deltaTime;
+                other.transform.position -= transform.right * knockbacklenght;
+            }
             Destroy(gameObject);
             //    //ScoreManager.AddPoints(10);
         }

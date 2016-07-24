@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 
     public float moveSpeed;
     public float jumpHeight;
+
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -28,7 +29,7 @@ public class PlayerControl : MonoBehaviour
     {
 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-
+        
     }
 
 	// Use this for initialization
@@ -56,7 +57,7 @@ public class PlayerControl : MonoBehaviour
         if (!deadCheck)
         {
             //Jumping
-            if (Input.GetKeyDown(KeyCode.UpArrow) /*&&*/ /*grounded*/)
+            if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
             {
                 //GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpHeight);
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
@@ -102,6 +103,7 @@ public class PlayerControl : MonoBehaviour
         }
         attackDelayCounter -= 1;
     }
+
 	
 	// Update is called once per frame
 	

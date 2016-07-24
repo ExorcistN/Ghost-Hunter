@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 403892}
   - 212: {fileID: 21231600}
-  - 95: {fileID: 9568440}
   - 58: {fileID: 5845250}
   - 50: {fileID: 5002080}
   - 114: {fileID: 11492890}
@@ -139,23 +138,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &9568440
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105696}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6bf9bfca6274f54cb67001c250f7ccf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11492890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ce536215b5f7a4b83a86c34a31a117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletspeed: 4
+  Bulletspeed: 7
+  player: {fileID: 0}
   damageToGive: 4
 --- !u!212 &21231600
 SpriteRenderer:

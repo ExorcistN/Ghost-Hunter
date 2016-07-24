@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 
     public float Bulletspeed;
-    public PlayerControl player;
+    private PlayerControl player;
 
     public int damageToGive;
 
