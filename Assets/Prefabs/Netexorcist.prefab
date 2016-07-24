@@ -169,8 +169,8 @@ MonoBehaviour:
   Nanim: {fileID: 9559994}
   Nanim2: {fileID: 0}
   NfirePoint: {fileID: 490306}
-  Nbullet: {fileID: 193106, guid: a261544ffec230246a86ec79a9433c12, type: 2}
-  NMeleeAttackEffect: {fileID: 120646, guid: 9c3e6d885ca975d4ea946d4efce7f5aa, type: 2}
+  Nbullet: {fileID: 105696, guid: 37c5807898d7fac44b4514362c496d22, type: 2}
+  NMeleeAttackEffect: {fileID: 120646, guid: 0950eb5b8a967fb4f82e08e18e2ae268, type: 2}
   NattackDelay: 25
 --- !u!114 &11424862
 MonoBehaviour:
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.04761905
+  m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0

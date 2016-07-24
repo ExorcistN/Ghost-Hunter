@@ -61,10 +61,16 @@
      <Compile Include="Assets\NScripts\NetPlayerControl.cs" />
      <Compile Include="Assets\Script2\BulletControl2.cs" />
      <Compile Include="Assets\Script2\Checkpoint2.cs" />
+     <Compile Include="Assets\Script2\DamageofEnemy2.cs" />
      <Compile Include="Assets\Script2\EnemyControl2.cs" />
+     <Compile Include="Assets\Script2\EnemyHealthManager2.cs" />
+     <Compile Include="Assets\Script2\HealthManager2.cs" />
+     <Compile Include="Assets\Script2\HurtPlayerControl2.cs" />
      <Compile Include="Assets\Script2\Kilplayer2.cs" />
      <Compile Include="Assets\Script2\LevelManager2.cs" />
+     <Compile Include="Assets\Script2\MeleeAttack2.cs" />
      <Compile Include="Assets\Script2\PlayControl2.cs" />
+     <Compile Include="Assets\Script2\ScoreChar.cs" />
      <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
