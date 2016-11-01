@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 8
-  character: {fileID: 0}
+  character: {fileID: 156726, guid: c4a0db50e9940d344b3288c81e2c2007, type: 2}
   knockbacklenght: 0.8
 --- !u!212 &21253758
 SpriteRenderer:

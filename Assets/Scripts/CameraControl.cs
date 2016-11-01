@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraControl : MonoBehaviour {
 
     public PlayerControl player;
-    private float MaxLeft=-0.75f;
+    private float MaxLeft=0f;
     public bool isFollowing;
 
     public float xOffset;
@@ -18,7 +18,7 @@ public class CameraControl : MonoBehaviour {
 	void Update () {
         if (isFollowing)
         {
-            transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, transform.position.z);
+            this.transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, transform.position.z);
         }
         if (player.transform.position.x < MaxLeft)
         {

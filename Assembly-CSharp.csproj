@@ -45,19 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lobby\Scripts\DraggablePanel.cs" />
-     <Compile Include="Assets\Lobby\Scripts\EventSystemChecker.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyHook.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyInfoPanel.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayer.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayerList.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerEntry.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerList.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
-     <Compile Include="Assets\NScripts\NetCameraControl.cs" />
      <Compile Include="Assets\NScripts\NetPlayerControl.cs" />
      <Compile Include="Assets\Script2\BulletControl2.cs" />
      <Compile Include="Assets\Script2\Checkpoint2.cs" />
@@ -85,11 +72,10 @@
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MeleeAttack.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
+     <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\RsEnemyControl.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
-     <None Include="Assets\Lobby\Documentation.txt" />
-     <None Include="Assets\Lobby\Instruction.txt" />
      <None Include="Assets\Fonts\OpenSans\License!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
