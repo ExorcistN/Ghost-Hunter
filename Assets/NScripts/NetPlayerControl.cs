@@ -47,12 +47,8 @@ public class NetPlayerControl : NetworkBehaviour
 
         //Camera Code
         CameraFollowing = true;
-        
-        //if (!isLocalPlayer)
-        //{
-        //    Nanim.runtimeAnimatorController = Resources.Load("exorcist") as RuntimeAnimatorController;
-        //}
-        if(isLocalPlayer)
+
+        if (!isLocalPlayer)
         {
             Nanim.runtimeAnimatorController = Resources.Load("exorcist") as RuntimeAnimatorController;
         }
@@ -73,12 +69,11 @@ public class NetPlayerControl : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
-        //    Nanim.runtimeAnimatorController = Resources.Load("exorcist") as RuntimeAnimatorController;
             transform.localScale = new Vector3(XscaleI, 1f, 1f);
             //Debug.Log("NotLocal:" + XscaleI);
             return;
         }
-
+        
         //Debug.Log(this.transform.position.x);
         //Debug.Log(CameraFollowing);
 

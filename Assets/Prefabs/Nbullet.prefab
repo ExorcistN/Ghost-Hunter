@@ -11,10 +11,10 @@ GameObject:
   - 212: {fileID: 21231600}
   - 58: {fileID: 5845250}
   - 50: {fileID: 5002080}
-  - 114: {fileID: 11492890}
   - 82: {fileID: 8280270}
   - 114: {fileID: 11479086}
   - 114: {fileID: 11452630}
+  - 114: {fileID: 11481144}
   m_Layer: 0
   m_Name: Nbullet
   m_TagString: BulletPower
@@ -192,7 +192,7 @@ MonoBehaviour:
     i15: 34
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &11492890
+--- !u!114 &11481144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -200,10 +200,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 105696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ce536215b5f7a4b83a86c34a31a117, type: 3}
+  m_Script: {fileID: 11500000, guid: 7905694798fbb0342a57c0154e41aad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletspeed: 7
+  NBulletspeed: 7
   damageToGive: 4
 --- !u!212 &21231600
 SpriteRenderer:

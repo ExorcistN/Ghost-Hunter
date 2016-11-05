@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 9556244}
-  m_ParameterSendBits: 7
+  m_ParameterSendBits: 0
   param0: 
   param1: 
   param2: 
@@ -237,6 +237,7 @@ MonoBehaviour:
   Nbullet: {fileID: 105696, guid: 37c5807898d7fac44b4514362c496d22, type: 2}
   NMeleeAttackEffect: {fileID: 120646, guid: 0950eb5b8a967fb4f82e08e18e2ae268, type: 2}
   NattackDelay: 25
+  XscaleI: 1
 --- !u!148 &14859514
 NetworkView:
   m_ObjectHideFlags: 1
